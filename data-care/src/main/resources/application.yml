@@ -1,0 +1,24 @@
+info.app.name: '@project.name@'
+info.app.version: '@project.version@'
+
+logging:
+  file: data-care.log
+
+server:
+  port: 8082
+
+spring:
+  rabbitmq:
+    host: ${RABBIT_HOST:localhost}
+
+spring.jpa.hibernate.ddl-auto: validate
+
+spring.h2.console.enabled: true
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_CLIENT_SERVICEURL_DEFAULTZONE:http://localhost:8761/eureka/}
+  instance:
+    appname: '@project.name@'
+    prefer-ip-address: true
