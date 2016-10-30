@@ -1,13 +1,21 @@
 # spring-boot-docker-rabbitmq-sample
 
 - RabbitMQ
-- Spring Boot App
+- Spring Boot Apps
+- Spring Cloud - Eureka
+- Spring Boot Admin by codecentric
 - Docker compose
 
 ## RabbitMQ
 for Management Console
 default user: guest
 default password: guest
+
+## build 
+```bash
+mvn clean install
+```
+in this step, also the docker images will be created (see docker-maven-plugin)
 
 ## run with docker-compose
 run...
