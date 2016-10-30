@@ -11,7 +11,7 @@ spring:
   rabbitmq:
     host: ${RABBIT_HOST:localhost}
 
-spring.jpa.hibernate.ddl-auto: validate
+spring.jpa.hibernate.ddl-auto: create-drop
 
 spring.h2.console.enabled: true
 

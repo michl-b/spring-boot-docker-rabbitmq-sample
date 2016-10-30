@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Receiver: MessageLog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <link rel="stylesheet" href="webjars/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css"/>
+
+</head>
+<body>
+<h1>Message Log</h1>
+
+<div>
+    <table class="table table-striped">
+        <caption>Messages</caption>
+        <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Time</th>
+            <th scope="col">Message</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="message : ${logMessages}">
+            <td th:text="${message.id}">?</td>
+            <td th:text="${message.timestamp}">-</td>
+            <td th:text="${message.message}">-</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<script src="webjars/jquery/3.1.1/jquery.min.js"></script>
+<script src="webjars/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js"></script>
+</body>
+</html>
