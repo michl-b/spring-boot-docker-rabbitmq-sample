@@ -1,0 +1,16 @@
+info.app.name: '@project.name@'
+info.app.version: '@project.version@'
+
+logging:
+  file: spring-boot-admin.log
+
+server:
+  port: 8083
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_CLIENT_SERVICEURL_DEFAULTZONE:http://localhost:8761/eureka/}
+  instance:
+    appname: '@project.name@'
+    prefer-ip-address: true

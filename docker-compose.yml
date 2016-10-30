@@ -12,6 +12,16 @@ eureka:
   environment:
     eureka.instance.hostname: eureka
 
+spring-boot-admin:
+  image: de.michlb.sample.rabbit/spring-boot-admin
+  links:
+    - eureka
+  ports:
+    #  local : container expose
+    - "8083:8080"
+  environment:
+    EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka:8761/eureka/
+
 data-import:
   image: de.michlb.sample.rabbit/data-import
   links:
