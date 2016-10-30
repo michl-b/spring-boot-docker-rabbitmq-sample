@@ -21,6 +21,7 @@
         </tr>
         </thead>
         <tbody>
+        <!--/*@thymesVar id="logMessages" type="java.util.List<de.michlb.sample.rabbit.domain.MessageLog>"*/-->
         <tr th:each="message : ${logMessages}">
             <td th:text="${message.id}">?</td>
             <td th:text="${message.timestamp}">-</td>

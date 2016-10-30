@@ -7,7 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
- * Created by admin on 29.10.16.
+ * Service for handling rabbit queue communication
+ *
+ * @author Michael Bartsch
  */
 @Service
 public class MessageService {
@@ -19,7 +21,7 @@ public class MessageService {
     public boolean sendQueueMessage(String message) {
         try {
             String queueName = "data-queue";
-            LOGGER.info(String.format("send message [%s] to queue [%s]", message, queueName ) );
+            LOGGER.info(String.format("send message [%s] to queue [%s]", message, queueName));
             rabbitTemplate.convertAndSend(queueName, message);
             LOGGER.error("done!");
             return true;

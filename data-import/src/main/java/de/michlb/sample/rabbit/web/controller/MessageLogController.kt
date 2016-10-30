@@ -7,17 +7,18 @@ import org.springframework.ui.Model
 import org.springframework.web.bind.annotation.GetMapping
 
 /**
- * Created by admin on 30.10.16.
+ * Web controller in Kotlin for MessageLog display
+ * @author Michael Bartsch
  */
 @Controller
 class MessageLogController {
 
     @Autowired
-    lateinit var messageLogrepository:MessageLogRepository
+    lateinit var messageLogrepository: MessageLogRepository
 
     @GetMapping("/messages")
-    fun showLog(model:Model):String {
-        var logMessages = messageLogrepository.findAll().reversed()
+    fun showLog(model: Model): String {
+        val logMessages = messageLogrepository.findAll().reversed()
         model.addAttribute("logMessages", logMessages)
         return "messageLog"
     }

@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import java.util.concurrent.CountDownLatch;
 
 /**
- * Created by admin on 28.10.16.
+ * @author Michael Bartsch
  */
 public class Receiver {
     private static final Logger LOGGER = LoggerFactory.getLogger(Receiver.class);

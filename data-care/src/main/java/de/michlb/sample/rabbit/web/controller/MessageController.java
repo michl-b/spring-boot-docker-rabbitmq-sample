@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 /**
- * Created by admin on 29.10.16.
+ * @author Michael Bartsch
  */
 @Controller
 public class MessageController {

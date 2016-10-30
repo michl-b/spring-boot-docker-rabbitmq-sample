@@ -4,17 +4,18 @@
     <title>Sender: Message</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 
-    <link rel="stylesheet" href="webjars/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="webjars/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css"/>
 
 </head>
 <body>
 <h1>Send Queue Message</h1>
 
+<!--/*@thymesVar id="messageForm" type="de.michlb.sample.rabbit.web.bean.MessageForm"*/-->
 <form action="#" th:action="@{/message}" th:object="${messageForm}" method="post">
     <div class="form-group">
         <label for="formGroupMessageInput">Message</label>
         <input type="text" class="form-control" id="formGroupMessageInput" placeholder="message text"
-               th:field="*{message}" />
+               th:field="*{message}"/>
     </div>
     <button type="submit" class="btn btn-primary">Send message</button>
 </form>

@@ -3,7 +3,9 @@ package de.michlb.sample.rabbit.web.bean;
 import lombok.Data;
 
 /**
- * Created by admin on 29.10.16.
+ * Form definition Bean for web presentation view
+ *
+ * @author Michael Bartsch
  */
 @Data
 public class MessageForm {

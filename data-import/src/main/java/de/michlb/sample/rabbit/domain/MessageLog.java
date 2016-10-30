@@ -10,7 +10,9 @@ import javax.persistence.Table;
 import java.time.LocalDateTime;
 
 /**
- * Created by admin on 30.10.16.
+ * Domain Entity for Queue message logging
+ *
+ * @author Michael Bartsch
  */
 @Entity
 @Table(name = "MESSAGE_LOG")

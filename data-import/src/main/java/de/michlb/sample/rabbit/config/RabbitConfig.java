@@ -5,6 +5,7 @@ import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;
 import org.springframework.amqp.core.Queue;
 import org.springframework.amqp.core.TopicExchange;
+import org.springframework.amqp.rabbit.connection.CachingConnectionFactory;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer;
 import org.springframework.amqp.rabbit.listener.adapter.MessageListenerAdapter;
@@ -12,7 +13,9 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * Created by admin on 28.10.16.
+ * Configuration of RabbitMQ handling
+ *
+ * @author Michael Bartsch
  */
 @Configuration
 public class RabbitConfig {
@@ -33,6 +36,11 @@ public class RabbitConfig {
     @Bean
     Binding binding(Queue queue, TopicExchange exchange) {
         return BindingBuilder.bind(queue).to(exchange).with(queueName);
+    }
+
+    @Bean
+    public ConnectionFactory connectionFactory() {
+        return new CachingConnectionFactory();
     }
 
     @Bean
