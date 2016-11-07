@@ -22,8 +22,8 @@ spring-boot-admin:
   environment:
     EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka:8761/eureka/
 
-data-import:
-  image: de.michlb.sample.rabbit/data-import
+data-backend:
+  image: de.michlb.sample.rabbit/data-backend
   links:
     - rabbitmq
     - eureka
@@ -44,4 +44,14 @@ data-care:
     - "8082:8080"
   environment:
     RABBIT_HOST: rabbitmq
+    EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka:8761/eureka/
+
+data-presentation:
+  image: de.michlb.sample.rabbit/data-presentation
+  links:
+    - eureka
+  ports:
+    #  local : container expose
+    - "8084:8080"
+  environment:
     EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka:8761/eureka/

@@ -2,7 +2,7 @@ info.app.name: '@project.name@'
 info.app.version: '@project.version@'
 
 logging:
-  file: data-import.log
+  file: data-backend.log
 
 server:
   port: 8081

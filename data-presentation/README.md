@@ -1,8 +1,6 @@
-# data-importer
+# data-presentation
 
-I am a Spring Boot Service which connects to a RabbitMQ queue and send itself a message via queue called "spring-boot"
-
-You can display all received messages at /messages view.
+I am a Spring Boot Service displays data received via REST from a data backend service
 
 ## tech
 
@@ -13,10 +11,8 @@ You can display all received messages at /messages view.
   - Actuator
   - Docker Plugin
 - Maven
-- H2 DB
 - Thymeleaf
 - Bootstrap 4 alpha
-- RabbitMQ
 - Eureka Service Discovery
 
 ## build docker image

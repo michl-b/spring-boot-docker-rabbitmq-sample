@@ -67,7 +67,8 @@
         <module>eureka</module>
         <module>spring-boot-admin</module>
         <module>data-care</module>
-        <module>data-import</module>
+        <module>data-presentation</module>
+        <module>data-backend</module>
     </modules>
 
 </project>

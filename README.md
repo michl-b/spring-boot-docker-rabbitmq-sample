@@ -6,9 +6,14 @@
 - Spring Boot Admin by codecentric
 - Docker compose
 
+![System Image](docs/spring-bootdockerrabbitmq.png)
+
+
 ## RabbitMQ
 for Management Console
+
 default user: guest
+
 default password: guest
 
 ## build 
