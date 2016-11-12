@@ -18,9 +18,14 @@ public class MessageService {
     @Autowired
     private RabbitTemplate rabbitTemplate = null;
 
-    public boolean sendQueueMessage(String message) {
+    /**
+     * push message to the queue
+     * @param queueName name of target queue
+     * @param message message to be sent
+     * @return true if successful, otherwise false
+     */
+    public boolean sendQueueMessage(String queueName, String message) {
         try {
-            String queueName = "data-queue";
             LOGGER.info(String.format("send message [%s] to queue [%s]", message, queueName));
             rabbitTemplate.convertAndSend(queueName, message);
             LOGGER.error("done!");

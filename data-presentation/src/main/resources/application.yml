@@ -3,6 +3,9 @@ info.app.version: '@project.version@'
 
 logging:
   file: data-presentation.log
+  level:
+    com:
+      netflix: DEBUG
 
 server:
   port: 8084
@@ -14,3 +17,4 @@ eureka:
   instance:
     appname: '@project.name@'
     prefer-ip-address: true
+    preferIpAddress: true

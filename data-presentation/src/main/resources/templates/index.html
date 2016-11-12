@@ -10,6 +10,17 @@
 <body>
 <h1>Backend Data</h1>
 
+<!--/*@thymesVar id="products" type="java.util.List<de.michlb.sample.rabbit.dto.Product>"*/-->
+<div th:each="product : ${products}" class="col-sm-6">
+    <div class="card">
+        <img class="card-img-top" th:src="${product.pictureUrl}" th:alt="${product.name}" />
+        <div class="card-block">
+            <h4 class="card-title" th:text="${product.name}">Card title</h4>
+            <p class="card-text" th:text="${product.price}">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+    </div>
+</div>
+
 <script src="webjars/jquery/3.1.1/jquery.min.js"></script>
 <script src="webjars/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js"></script>
 </body>

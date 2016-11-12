@@ -24,11 +24,12 @@ public class MessageLog {
     @GeneratedValue
     private Long id;
 
+    private String queue;
     private String message;
 
     private LocalDateTime timestamp = LocalDateTime.now();
 
-    public MessageLog(String message) {
+    public MessageLog(String queue, String message) {
         this.message = message;
         timestamp = LocalDateTime.now();
     }

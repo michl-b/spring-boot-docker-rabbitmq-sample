@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Sender: Product</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="webjars/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css"/>
+</head>
+<body>
+<h1>Send Product as Message</h1>
+
+<div th:if="${error}">
+<label class="alert-danger" th:text="${error}"></label>
+</div>
+
+<form action="#" th:action="@{/product}" th:object="${productForm}" method="post">
+    <div class="form-group">
+        <label for="formGroupNameInput">Name</label>
+        <input type="text" class="form-control" id="formGroupNameInput" placeholder="name"
+               th:field="*{name}"/>
+    </div>
+    <div class="form-group">
+        <label for="formGroupPictureUrlInput">Picture-Url</label>
+        <input type="url" class="form-control" id="formGroupPictureUrlInput" placeholder="http://www.wohoo.de/image.png"
+               th:field="*{pictureUrl}"/>
+    </div>
+    <div class="form-group">
+        <label for="formGroupPriceInput">Name</label>
+        <input type="number" step="0.01" class="form-control" id="formGroupPriceInput" placeholder="0,00"
+               th:field="*{price}"/>
+    </div>
+    <button type="submit" class="btn btn-primary">Send</button>
+</form>
+
+<script src="webjars/jquery/3.1.1/jquery.min.js"></script>
+<script src="webjars/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js"></script>
+</body>
+</html>

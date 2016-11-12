@@ -33,7 +33,7 @@ public class MessageController {
     public String sendMessage(@ModelAttribute MessageForm messageForm, Model model) {
         LOGGER.error(String.format("received MessageForm: [%s]", messageForm.toString()));
 
-        messageService.sendQueueMessage(messageForm.getMessage());
+        messageService.sendQueueMessage("data-queue", messageForm.getMessage());
 
         model.addAttribute("messageForm", messageForm);
         return "message";

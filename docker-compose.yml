@@ -50,6 +50,7 @@ data-presentation:
   image: de.michlb.sample.rabbit/data-presentation
   links:
     - eureka
+    - data-backend
   ports:
     #  local : container expose
     - "8084:8080"
