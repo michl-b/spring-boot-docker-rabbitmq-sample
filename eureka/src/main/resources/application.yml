@@ -4,7 +4,6 @@ server:
 eureka:
   instance:
     hostname: localhost
-    prefer-ip-address: true
     preferIpAddress: true
   client:
     registerWithEureka: false
@@ -13,8 +12,9 @@ eureka:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
 
 logging:
+  config:
+     classpath: "logback-spring.xml"
   file: eureka.log
-  level: INFO
 
 info.app.name: '@project.name@'
 info.app.version: '@project.version@'
