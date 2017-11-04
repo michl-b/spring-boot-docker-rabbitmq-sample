@@ -1,5 +1,7 @@
 # spring-boot-docker-rabbitmq-sample
 
+[Slides](http://slides.com/michlb/spring-bootdockerrabbitmq-924be2fc-567e-4d98-925f-39eedd37c762)
+
 - RabbitMQ
 - Spring Boot Apps
 - Spring Cloud - Eureka
